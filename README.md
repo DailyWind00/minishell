@@ -6,6 +6,9 @@ A simple Bash
 I did this project with Tuvosyl
 - ![Tuvosyl Github](https://github.com/tuvosyl)
 
+This project pass the minishell tester of LucasKuhn :
+- ![Minishell Tester](https://github.com/LucasKuhn/minishell_tester)
+
 This project use the readline function, causing some leaks and weirds issues in the code, to fix the leaks, use :
 ```shell
 valgrind --suppressions="rl.supp" ./minishell
@@ -59,6 +62,12 @@ make
 
 # Program :
 ./minishell
+
+# Tester  :
+cd minishell
+make
+cd minishell_tester
+./tester
 ```
 
 There's also a debug mode for this program, to use it you must use :
