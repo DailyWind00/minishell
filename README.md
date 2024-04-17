@@ -1,6 +1,8 @@
 # so_long ✅101/100
 A simple Bash
 
+- ![minishell subject](en.subject.pdf)
+
 I did this project with Tuvosyl
 - ![Tuvosyl Github](https://github.com/tuvosyl)
 
@@ -15,7 +17,7 @@ The program is divided in 4 parts :
   - Checking
   - Parsing
   - Executing
-(Keep in mind that I did the checking/parsing parts and Tuvosyl did the reading/executing/leaks parts)
+(Keep in mind that I did the checking/parsing parts and Tuvosyl did the reading/executing/leaks parts so I might not explain well his parts)
 
 ## Reading
 The reading part is very small, as it only contain the readline function.
@@ -42,7 +44,11 @@ At the end of the parsing it look like this :
 
 ## Executing
 The executing part is the final part, it take the command list and must comport exactly like bash :
-  - First it check if there is pipes or redirections
+  - If there is heredocs, it add another readline and work like bash,
+  - If there is redirections, it change the fd of the command according the redirection,
+  - If there is pipes, it fork the process to get a pipeline with the result of the command being put into the pipe for the next command input,
+  - Then if the command is a builtins, it enter in the correct command function instead of doing the binary file (it should work without PATH),
+  - Else, it do the access/execve commands with the PATH.
 
 
 
