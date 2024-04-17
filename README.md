@@ -44,6 +44,8 @@ At the end of the parsing it look like this :
 The executing part is the final part, it take the command list and must comport exactly like bash :
   - First it check if there is pipes or redirections
 
+
+
 To use the program, you must do these commands :
 ```shell
 cd minishell
@@ -52,6 +54,12 @@ make
 # Program :
 ./minishell
 ```
+
+There's also a debug mode for this program, to use it you must use :
+```shell
+make debug
+```
+(/!\ Keep in mind the debugger is only for understanding the parsing and can cause unexpected behavior as it's not mandatory /!\)
 
 You also have these commands for cleaning the minishell directory :
 ```shell
@@ -64,9 +72,3 @@ make fclean
 # Clean everything and recompile the executable
 make re
 ```
-
-There's also a debug mode for this program, to use it you must use :
-```shell
-make debug
-```
-(/!\ Keep in mind the debugger is only for understanding the parsing and can cause unexpected behavior as it's not mandatory /!\)
