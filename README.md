@@ -30,7 +30,16 @@ This part is very usefull for later as in the parsing you'll have the garanty of
 
 ##Parsing
 The parsing part parse the command into a command struct like this :
+  - It split the command string with the pipes,
+  - It set the environment variables if there's any,
+  - It parse the redirections and remove them from the string,
+  - It split the last inputs with the whitespaces in a list as they are the command and arguments.
+At the end of the parsing it look like this :
+![](parsing_debug.PNG)
 
+##Executing
+The executing part is the final part, it take the command list and must comport exactly like bash :
+  - First it check if there is pipes or redirections
 
 To use the program, you must do these commands :
 ```shell
