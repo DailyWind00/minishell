@@ -17,10 +17,10 @@ The program is divided in 4 parts :
   - Executing
 (Keep in mind that I did the checking/parsing parts and Tuvosyl did the reading/executing/leaks parts)
 
-##Reading
+## Reading
 The reading part is very small, as it only contain the readline function.
 
-##Checking
+## Checking
 The checking part verify the command put in the readline function, if the command 
   - have unclosed quotes,
   - have unclosed pipes,
@@ -28,7 +28,7 @@ The checking part verify the command put in the readline function, if the comman
 then the program return to the reading part.
 This part is very usefull for later as in the parsing you'll have the garanty of a valid command.
 
-##Parsing
+## Parsing
 The parsing part parse the command into a command struct like this :
   - It split the command string with the pipes,
   - It set the environment variables if there's any,
@@ -37,7 +37,7 @@ The parsing part parse the command into a command struct like this :
 At the end of the parsing it look like this :
 ![](parsing_debug.PNG)
 
-##Executing
+## Executing
 The executing part is the final part, it take the command list and must comport exactly like bash :
   - First it check if there is pipes or redirections
 
