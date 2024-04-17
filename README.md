@@ -37,6 +37,7 @@ The parsing part parse the command into a command struct like this :
   - It split the last inputs with the whitespaces in a list as they are the command and arguments.
 
 At the end of the parsing it look like this :
+
 ![](parsing_debug.png)
 
 ## Executing
