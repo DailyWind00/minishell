@@ -35,7 +35,7 @@ The parsing part parse the command into a command struct like this :
   - It parse the redirections and remove them from the string,
   - It split the last inputs with the whitespaces in a list as they are the command and arguments.
 At the end of the parsing it look like this :
-![](parsing_debug.PNG)
+![](parsing_debug.png)
 
 ## Executing
 The executing part is the final part, it take the command list and must comport exactly like bash :
