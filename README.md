@@ -26,6 +26,7 @@ The checking part verify the command put in the readline function, if the comman
   - have unclosed pipes,
   - have unclosed redirection,
 then the program return to the reading part.
+
 This part is very usefull for later as in the parsing you'll have the garanty of a valid command.
 
 ## Parsing
@@ -34,6 +35,7 @@ The parsing part parse the command into a command struct like this :
   - It set the environment variables if there's any,
   - It parse the redirections and remove them from the string,
   - It split the last inputs with the whitespaces in a list as they are the command and arguments.
+
 At the end of the parsing it look like this :
 ![](parsing_debug.png)
 
