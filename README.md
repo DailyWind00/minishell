@@ -1,4 +1,4 @@
-# so_long ✅101/100
+# Minishell ✅101/100
 A simple Bash
 
 - ![minishell subject](en.subject.pdf)
